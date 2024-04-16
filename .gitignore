@@ -5,3 +5,5 @@ out
 resonances
 *.tar.gz
 venv
+*/gcodes/*
+!*/gcodes/.keep
