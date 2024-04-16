@@ -19,9 +19,9 @@ services:
       -l printer_data/logs/klippy.log
     volumes:
       - /dev:/dev
-      - ./config:/opt/printer_data/config
+      - ./geeetech/config:/opt/printer_data/config
       - run:/opt/printer_data/run
-      - gcode:/opt/printer_data/gcodes
+      - ./geeetech/gcodes:/opt/printer_data/gcodes
       - log:/opt/printer_data/logs
     labels:
       org.prind.service: klipper
@@ -45,10 +45,10 @@ services:
       - /run/dbus:/run/dbus
       - /run/systemd:/run/systemd
       - run:/opt/printer_data/run
-      - gcode:/opt/printer_data/gcodes
+      - ./geeetech/gcodes:/opt/printer_data/gcodes
       - log:/opt/printer_data/logs
       - moonraker-db:/opt/printer_data/database
-      - ./config:/opt/printer_data/config
+      - ./geeetech/config:/opt/printer_data/config
     profiles:
       - fluidd
       - mainsail
